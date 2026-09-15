@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Mohammed Rajkotwala</title>
+
+    <meta name="author" content="Mohammed Rajkotwala">
+    <meta name="description" content="Mohammed Rajkotwala builds hardware, embedded systems, and autonomous robots at Carnegie Mellon University.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Mohammed Rajkotwala
+                </p>
+                <p>
+                  I study ECE and Robotics at <a href="https://www.cmu.edu/">Carnegie Mellon University</a> in Pittsburgh, where I build hardware, autonomy, and compute.
+                  My work runs from digital architecture through embedded control to machines that move in the real world.
+                </p>
+                <p>
+                  I've worked on <a href="#moonranger">MoonRanger</a>, a NASA-funded lunar rover, with Red Whittaker and David Wettergreen.
+                  I'm currently building <a href="https://tryastrea.tech">tryastrea.tech</a>.
+                </p>
+                <p style="text-align:center">
+                  <a href="mailto:mrajkotw@andrew.cmu.edu">Email</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/mohammed2945">GitHub</a> &nbsp;/&nbsp;
+                  <a href="https://www.linkedin.com/in/mrajkotw">LinkedIn</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:37%;max-width:37%">
+                <img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/profile.svg">
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Projects</h2>
+                <p>
+                  I'm interested in digital hardware, embedded real-time systems, robotics, and machine learning. Most of my projects are about turning ambitious ideas into reliable systems that run on real hardware. Some projects are <span class="highlight">highlighted</span>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+
+<tr id="matrix-multiplier">
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <div class="one">
+      <img src="images/matrix-layout.png" alt="Physical layout of the FPGA matrix multiplier">
+    </div>
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="https://drive.google.com/file/d/1gv6MREcfpHaOXSr0hkWFOvYGqxschiGQ/view?usp=drive_link">
+      <span class="papertitle">TPU-Inspired Matrix Multiplier on FPGA</span>
+    </a>
+    <br>
+    <em>SystemVerilog, FPGA, DSP, BRAM, INT8</em>
+    <br>
+    <a href="https://drive.google.com/file/d/1gv6MREcfpHaOXSr0hkWFOvYGqxschiGQ/view?usp=drive_link">project file</a>
+    <p></p>
+    <p>
+    A systolic INT8 engine in SystemVerilog with DSP multipliers, on-chip BRAM, and pipelined compute stages. The architecture prioritizes data reuse and parallel execution for efficient edge inference.
+    </p>
+  </td>
+</tr>
+
+
+<tr id="esp32-rtos">
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <div class="one">
+      <img src="images/rtos-pcb-schematic.png" alt="Schematic for the custom ESP32 controller PCB">
+    </div>
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="https://drive.google.com/file/d/17ra1zbE6leAxLZVQtbVozv6B8gH8amHQ/view?usp=drive_link">
+      <span class="papertitle">RTOS on ESP32 for an RC Car Stack</span>
+    </a>
+    <br>
+    <em>C/C++, RTOS, ESP32, custom PCB, control loops</em>
+    <br>
+    <a href="https://drive.google.com/file/d/17ra1zbE6leAxLZVQtbVozv6B8gH8amHQ/view?usp=drive_link">project file</a>
+    <p></p>
+    <p>
+    A compact real-time operating environment that coordinates sensing, control, and actuation under tight deadlines, supported by a custom PCB designed around the ESP32.
+    </p>
+  </td>
+</tr>
+
+
+<tr id="moonranger" onmouseout="moonranger_stop()" onmouseover="moonranger_start()" bgcolor="#ffffd0">
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <div class="one">
+      <div class="two" id='moonranger_image'><video muted autoplay loop playsinline>
+      <source src="images/moonranger-wheel-test.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video></div>
+      <img src="images/moonranger-wheel-test.png" alt="MoonRanger wheel testing setup on simulated lunar terrain">
+    </div>
+    <script type="text/javascript">
+      function moonranger_start() {
+        document.getElementById('moonranger_image').style.opacity = "1";
+      }
+
+      function moonranger_stop() {
+        document.getElementById('moonranger_image').style.opacity = "0";
+      }
+      moonranger_stop()
+    </script>
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <span class="papertitle">MoonRanger: NASA-Funded Lunar Rover</span>
+    <br>
+    with Red Whittaker and David Wettergreen
+    <br>
+    <em>Carnegie Mellon University</em>
+    <br>
+    <a href="images/moonranger-wheel-test.mp4">video</a>
+    <p></p>
+    <p>
+    A wheel testing framework for MoonRanger that validates mobility and hardware behavior across simulated south-pole terrain.
+    </p>
+  </td>
+</tr>
+
+
+<tr id="quantum-classifier">
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <div class="one">
+      <img src="images/hybrid-model.svg" alt="Hybrid model flow: data encoding, quantum circuit, prediction and explanation">
+    </div>
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="https://github.com/mohammed2945/FLIQ_Hackathon">
+      <span class="papertitle">Hybrid Quantum-Classical Tumor Classifier</span>
+    </a>
+    <br>
+    <em>PennyLane, PyTorch, SHAP, adversarial testing</em>
+    <br>
+    <a href="https://github.com/mohammed2945/FLIQ_Hackathon">code</a>
+    <p></p>
+    <p>
+    Compared classical, quantum, and hybrid neural architectures on two biomedical datasets, with SHAP explanations, adversarial analysis, counterfactuals, and governance metadata.
+    </p>
+  </td>
+</tr>
+
+
+<tr id="low-light-gan" onmouseout="gan_stop()" onmouseover="gan_start()">
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <div class="one">
+      <div class="two" id='gan_image'>
+        <img src="images/gan-output.png" alt="GAN-enhanced output image">
+      </div>
+      <img src="images/gan-input.png" alt="Dark input image before enhancement">
+    </div>
+    <script type="text/javascript">
+      function gan_start() {
+        document.getElementById('gan_image').style.opacity = "1";
+      }
+
+      function gan_stop() {
+        document.getElementById('gan_image').style.opacity = "0";
+      }
+      gan_stop()
+    </script>
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="https://github.com/mohammed2945/low_light_GAN">
+      <span class="papertitle">Low-Light Image Enhancement GAN</span>
+    </a>
+    <br>
+    <em>PyTorch, pix2pix, U-Net, PatchGAN, FID</em>
+    <br>
+    <a href="https://github.com/mohammed2945/low_light_GAN">code</a>
+    /
+    <a href="images/gan-input.png">input</a>
+    /
+    <a href="images/gan-output.png">output</a>
+    /
+    <a href="images/gan-ground-truth.png">ground truth</a>
+    <p></p>
+    <p>
+    A pix2pix-inspired GAN with a U-Net generator and PatchGAN discriminator, evaluated for image quality and diversity using FID and Inception Score. Hover to see the enhanced output.
+    </p>
+  </td>
+</tr>
+
+          </tbody></table>
+
+
+          <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
+            <tr>
+              <td>
+                <h2>Miscellanea</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr>
+              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
+                <div class="colored-box" style="background-color: #fcb97d;">
+                  <h2>Building</h2>
+                </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://tryastrea.tech">tryastrea.tech</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
+                <div class="colored-box" style="background-color: #aaba9e;">
+                  <h2>Toolbox</h2>
+                </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                Hardware: SystemVerilog, FPGA, DSP, custom PCB design
+                <br>
+                Embedded: C/C++, RTOS, ESP32, control loops
+                <br>
+                Robotics: autonomy, systems integration, field testing
+                <br>
+                Machine learning: PyTorch, PennyLane, SHAP, GANs
+              </td>
+            </tr>
+
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:right;font-size:small;">
+                  Design adapted from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

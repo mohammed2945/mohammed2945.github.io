@@ -1,0 +1,10 @@
+.DS_Store
+.gstack/
+.code-review-graph/
+.agents/
+.claude/
+.cursor/
+.gemini/
+.kiro/
+.qoder/
+PRODUCT.md
