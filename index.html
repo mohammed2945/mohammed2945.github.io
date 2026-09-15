@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
@@ -35,6 +37,21 @@
               </td>
               <td style="padding:2.5%;width:37%;max-width:37%">
                 <img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/profile.jpg">
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Currently</h2>
+                <p>
+                  <strong>Building <a href="https://tryastrea.tech">Astrea</a>.</strong>
+                  Reasoning infrastructure for production systems. Astrea turns a live incident into a structured, queryable model of what changed, then reasons over it to point engineers straight at the likely cause.
+                </p>
+                <p>
+                  <strong>Learning industrial robotics.</strong>
+                  I'm writing up what I learn as I go on the <a href="#blog">blog</a>.
+                </p>
               </td>
             </tr>
           </tbody></table>
@@ -193,6 +210,36 @@
   </td>
 </tr>
 
+          </tbody></table>
+
+
+          <table id="blog" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Blog</h2>
+                <p>
+                  Notes on what I'm building and learning.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+{% for post in site.posts %}
+            <tr>
+              <td style="padding:8px 16px;width:20%;vertical-align:top;white-space:nowrap">
+                <em>{{ post.date | date: "%b %-d, %Y" }}</em>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:top">
+                <a href="{{ post.url }}"><span class="papertitle">{{ post.title }}</span></a>
+                <br>
+                {{ post.excerpt | strip_html | truncate: 160 }}
+              </td>
+            </tr>
+{% else %}
+            <tr>
+              <td style="padding:8px 16px">First post coming soon.</td>
+            </tr>
+{% endfor %}
           </tbody></table>
 
 
